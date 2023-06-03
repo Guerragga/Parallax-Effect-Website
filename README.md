@@ -5,7 +5,7 @@
 
 ## Layout
 
-![Conteudo do site, Efeito parallax com imagens de background, um robô e a personagem principal 2B]()
+![Conteudo do site, Efeito parallax com imagens de background, um robô e a personagem principal 2B](https://github.com/Guerragga/Parallax-Effect-Website/blob/main/gif/nier%20project.gif)
 
 ## technologies used
 - Html
