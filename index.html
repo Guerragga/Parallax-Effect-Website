@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--images effect parallax-->
+    <div id="parallax">
+        <div class="layer bg" data-speed="0.10"></div>
+        <div class="layer robot" data-speed="-0.30"></div>
+        <div class="layer n2b" data-speed="0.25"></div>
+        <div class="layer bottom" data-speed="0"></div>
+    </div>
+    <!--Mainly content-->
+    <section>
+        <img src="./img/NierAutomataLogo.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea non autem consequuntur, qui corporis sunt itaque culpa minus temporibus quaerat labore. Officia adipisci veniam, ab consectetur quis illum aliquam praesentium libero voluptas esse, natus, aut dolore. Blanditiis voluptatem quasi consectetur consequatur, totam, quod in mollitia rem odio modi accusantium eaque eos adipisci quo nemo aspernatur qui repellendus voluptatum! Numquam amet velit excepturi esse officia omnis, ipsam neque similique sit nostrum autem est eveniet, vel id et ut odit temporibus, officiis iste accusamus laudantium quae aut eos incidunt! Ullam voluptates nostrum cumque tenetur fugiat labore, minima, nam saepe cum iusto laborum laboriosam? Doloribus incidunt sit saepe. Neque sapiente odit a recusandae iure hic laudantium maxime aliquid fugit sunt. Laborum saepe facere amet quisquam deserunt maxime iste esse repudiandae veniam perspiciatis nihil excepturi tempora, explicabo error numquam non molestiae adipisci eos quae perferendis, voluptatem fugiat. Quaerat voluptatem recusandae natus, saepe culpa minima ducimus nihil quibusdam. Voluptates rem quis eveniet reiciendis commodi alias quae velit maxime ex nostrum natus culpa nobis facere vero aliquam exercitationem beatae, veniam perspiciatis necessitatibus, obcaecati omnis inventore. Animi voluptas facere iste omnis sint ut ea hic adipisci quos, laboriosam id rerum at cum veniam, odio eum laudantium ducimus temporibus alias ipsam inventore commodi! Ipsam fugit molestias sequi cum voluptatum at? Nobis velit asperiores ipsam officia, ex exercitationem facere eaque est, voluptates eius hic natus accusamus molestias sint veniam placeat unde aliquid expedita. Ad quasi autem molestiae, libero voluptates, quis magni quas, consequuntur aliquid a facilis similique earum natus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea non autem consequuntur, qui corporis sunt itaque culpa minus temporibus quaerat labore. Officia adipisci veniam, ab consectetur quis illum aliquam praesentium libero voluptas esse, natus, aut dolore. Blanditiis voluptatem quasi consectetur consequatur, totam, quod in mollitia rem odio modi accusantium eaque eos adipisci quo nemo aspernatur qui repellendus voluptatum! Numquam amet velit excepturi esse officia omnis, ipsam neque similique sit nostrum autem est eveniet, vel id et ut odit temporibus, officiis iste accusamus laudantium quae aut eos incidunt! Ullam voluptates nostrum cumque tenetur fugiat labore, minima, nam saepe cum iusto laborum laboriosam? Doloribus incidunt sit saepe. Neque sapiente odit a recusandae iure hic laudantium maxime aliquid fugit sunt. Laborum saepe facere amet quisquam deserunt maxime iste esse repudiandae veniam perspiciatis nihil excepturi tempora, explicabo error numquam non molestiae adipisci eos quae perferendis, voluptatem fugiat. Quaerat voluptatem recusandae natus, saepe culpa minima ducimus nihil quibusdam. Voluptates rem quis eveniet reiciendis commodi alias quae velit maxime ex nostrum natus culpa nobis facere vero aliquam exercitationem beatae, veniam perspiciatis necessitatibus, obcaecati omnis inventore. Animi voluptas facere iste omnis sint ut ea hic adipisci quos, laboriosam id rerum at cum veniam, odio eum laudantium ducimus temporibus alias ipsam inventore commodi! Ipsam fugit molestias sequi cum voluptatum at? Nobis velit asperiores ipsam officia, ex exercitationem facere eaque est, voluptates eius hic natus accusamus molestias sint veniam placeat unde aliquid expedita. Ad quasi autem molestiae, libero voluptates, quis magni quas, consequuntur aliquid a facilis similique earum natus.</p>
+    </section>
+    <!--Script to effect parallax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#parallax",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+
+        gsap.utils.toArray(".layer").forEach(layer => {
+            const speed = layer.dataset.speed;
+            const movement = -(layer.offsetHeight * speed)
+            tl.to(layer, {y:movement,ease: "none"},0)
+        })
+    </script>
+</body>
+</html>
