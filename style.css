@@ -5,7 +5,29 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
+/* Estilizando a barra de rolagem */
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Cor de fundo da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #171717;
+  }
+  
+  /* Cor da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+  
+  /* Adicionando uma sombra na barra de rolagem */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 body{
     background: #000;
 }
@@ -63,13 +85,80 @@ section{
     text-align: center;
     flex-direction: column;
 }
+.home{
+    margin: 30px;
+}
 /*Css img logo*/
-section img{
+.home img{
     max-width: 500px;
 }
 /*Css lorem content*/
-section p{
+.home p{
     color: #fff;
     margin-top: 50px;
     text-align: center;
+}
+
+.recepcao p{
+    margin-bottom: 30px;
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #555;
+  }
+  .recepcao{
+    display: block;
+  }
+  .recepcao img{
+    display: flex;
+    position: absolute;
+    height: 350px;
+    right: 100px;
+    top: 2750px;
+    border-radius: 20px;
+  }
+.recepcao h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.personagens h1{
+    font-size: 50px;
+    margin: 30px;
+}
+.character{
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.character img{
+    height: 300px;
+    border-radius: 20px 0 0 20px;
+}
+.character h2{
+    margin-bottom: 20px;
+    align-items: center;
+}
+.soundtrack{
+    margin-bottom: 30px;
+}
+.soundtrack h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.soundtrack p{
+    margin: 20px 0;
+}
+.soundtrack ul{
+    text-align: left;
+    margin-left: 20px;
 }
