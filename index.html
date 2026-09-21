@@ -1,144 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Scrolling Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Uma experiência visual inspirada em NieR: Automata, com parallax acessível, responsivo e sem dependências de JavaScript.">
+  <meta name="theme-color" content="#10100d">
+  <title>NieR: Automata — Parallax Experience</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <!--images effect parallax-->
-    <div id="parallax">
-        <div class="layer bg" data-speed="0.10"></div>
-        <div class="layer robot" data-speed="-0.30"></div>
-        <div class="layer n2b" data-speed="0.25"></div>
-        <div class="layer bottom" data-speed="0"></div>
-    </div>
-    <!--Mainly content-->
-    <section>
-        <div class="home">
-        <img src="./img/NierAutomataLogo.png" alt="Nier Logo">
-        <p>Em um futuro distópico, a humanidade foi forçada a abandonar a Terra após uma invasão alienígena. Agora, androides de combate são a última linha de defesa, lutando contra as máquinas hostis que dominam o planeta. Entre eles, destaca-se 2B, uma androide de combate habilidosa e determinada, cuja missão é recuperar a Terra para a humanidade. Auxiliada por seu parceiro 9S, um scanner androide curioso e perspicaz, eles mergulham em um mundo devastado, encontrando ruínas da civilização humana e confrontando segredos sombrios.
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-            Ao longo de sua jornada, 2B e 9S descobrem que a linha entre máquinas e humanidade é mais tênue do que imaginavam, questionando sua própria existência e propósito. Enquanto exploram temas de identidade, livre-arbítrio e moralidade, são confrontados por escolhas difíceis e consequências imprevisíveis. Paralelamente, a enigmática A2, uma android renegada, emerge com seus próprios objetivos, desafiando as estruturas estabelecidas e lançando uma nova luz sobre os eventos do passado.
-            
-            Em meio a batalhas épicas e uma narrativa emocionalmente carregada, "NieR: Automata" oferece uma experiência profunda e reflexiva, onde cada escolha e encontro molda o destino dos protagonistas e do mundo que habitam. Conforme a trama se desenrola, os jogadores são levados a questionar não apenas as motivações dos personagens, mas também suas próprias percepções sobre o que significa ser humano em um cenário pós-apocalíptico repleto de desafios e descobertas surpreendentes.</p>
-        </div>
-        
-        <div class="personagens">
-            <h1>Personagens</h1>
-        <div class="character">
-            <img src="./img/2B_character.png" alt="2B">
-            <div class="about">
-                <h2>2B (YoRHa No.2 Type B)</h2>
-                <p>Uma android de combate, 2B é uma personagem calma, determinada e altamente habilidosa na batalha. Ela é designada para missões perigosas e tem uma relação próxima com 9S, embora ela se mantenha profissional e focada em sua missão. 2B é icônica por seu design elegante e sua postura estoica, escondendo emoções profundas e conflitos internos.</p>
-            </div>
-        </div>
-        <div class="character">
-            <img src="./img/9S_character.png" alt="9S">
-            <div class="about">
-                <h2>9S (YoRHa No.9 Type S)</h2>
-                <p>Um scanner android, 9S é curioso, perspicaz e possui habilidades técnicas excepcionais. Ele tem uma natureza mais emotiva do que 2B e está constantemente buscando entender melhor o mundo ao seu redor, muitas vezes questionando as ordens e o propósito de sua existência. Sua relação com 2B é central na história, e suas interações exploram temas de confiança, lealdade e descoberta pessoal.</p>
-            </div>
-        </div>
-        <div class="character">
-            <img src="./img/A2_character.png" alt="A2">
-            <div class="about">
-                <h2>A2 (YoRHa Type A No.2)</h2>
-                <p>Uma android renegada, A2 é apresentada como uma personagem misteriosa e determinada, com uma atitude mais solitária e rebelde em comparação com 2B e 9S. Ela possui uma história de fundo complexa e está em uma jornada de redenção e descoberta de sua própria identidade. A2 traz uma nova perspectiva à narrativa, desafiando as convenções estabelecidas e oferecendo uma visão única sobre os temas explorados no jogo.</p>
-            </div>
-        </div>
+  <header class="site-header" aria-label="Cabeçalho principal">
+    <a class="site-brand" href="#inicio" aria-label="Voltar ao início">
+      <span class="site-brand__mark" aria-hidden="true">Y</span>
+      <span>YoRHa // Archive</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#visao-geral">Visão geral</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#trilha">Trilha</a>
+      <a href="#recepcao">Recepção</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio" aria-labelledby="hero-title" data-parallax-root>
+    <div class="hero__parallax" aria-hidden="true">
+      <div class="parallax-layer parallax-layer--background" data-speed="0.08"></div>
+      <div class="parallax-layer parallax-layer--machine" data-speed="-0.12"></div>
+      <div class="parallax-layer parallax-layer--android" data-speed="0.16"></div>
+      <div class="parallax-layer parallax-layer--foreground" data-speed="0"></div>
     </div>
-    <div class="soundtrack">
-        <h1>soundtrack</h1>
-        <p>O soundtrack de "NieR: Automata" é conhecido por sua variedade e qualidade excepcional, com composições emocionantes que complementam perfeitamente a atmosfera do jogo. Algumas das músicas mais notáveis incluem:</p>
-        <ul>
-            <li>"Weight of the World" - A música tema do jogo, conhecida por sua beleza melódica e letras profundas.</li>
-            <li>"City Ruins" - Uma faixa emblemática que captura a sensação de desolação e beleza do mundo abandonado.</li>
-            <li>"Amusement Park" - Uma peça animada e cativante que ecoa a atmosfera lúdica do parque de diversões no jogo.</li>
-            <li>"A Beautiful Song" - Uma música poderosa e emocional que define um dos momentos mais intensos da história.</li>
-            <li>"Copied City" - Uma faixa misteriosa e envolvente que acompanha um dos locais mais intrigantes do jogo.</li>
-        </ul>
-        <p>Essas são apenas algumas das muitas músicas incríveis que compõem o soundtrack de "NieR: Automata", criado pelo renomado compositor Keiichi Okabe e sua equipe. A trilha sonora contribui significativamente para a experiência única e memorável do jogo, evocando uma ampla gama de emoções nos jogadores ao longo de sua jornada.</p>
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="eyebrow">YoRHa Archive // 11945 AD</p>
+      <img class="hero__logo" src="./img/NierAutomataLogo.png" alt="NieR: Automata">
+      <h1 class="sr-only" id="hero-title">NieR: Automata — Parallax Experience</h1>
+      <p class="hero__lede">
+        Um estudo visual sobre identidade, consciência e livre-arbítrio em um mundo onde a fronteira entre humano e máquina deixa de ser óbvia.
+      </p>
+      <a class="button button--primary" href="#visao-geral">Explorar arquivo</a>
     </div>
-    <div class="recepcao">
-        <h1>Recepção</h1>
-        <p>"NieR: Automata" recebeu aclamação universal pela crítica especializada, com uma pontuação de 88/100 para a versão de PlayStation 4 e 84/100 para a versão de Microsoft Windows no Metacritic. A história intrigante e não convencional de Yoko Taro foi elogiada por sua cativante narrativa e múltiplos finais, que incentivaram os jogadores a explorarem mais o jogo. A jogabilidade foi considerada uma melhoria em relação aos trabalhos anteriores de Yoko, com combates variados e criativos, embora alguns críticos tenham observado certa repetitividade. A trilha sonora foi unanimemente elogiada por sua variedade e capacidade de aprimorar as diferentes seções do jogo. No entanto, problemas técnicos, como travamentos e questões gráficas, foram apontados como pontos negativos, especialmente na versão para PC.</p>
-<div>
-<table>
-<tr>
-<th>Publicação</th>
-<th>Nota</th>
-</tr>
-<tr>
-<td>Destructoid</td>
-<td>9/10</td>
-</tr>
-<tr>
-<td>Electronic Gaming Monthly</td>
-<td>8,5/10</td>
-</tr>
-<tr>
-<td>Famitsu</td>
-<td>39/40</td>
-</tr>
-<tr>
-<td>Game Informer</td>
-<td>7,75/10</td>
-</tr>
-<tr>
-<td>Game Revolution</td>
-<td>4 de 5 estrelas</td>
-</tr>
-<tr>
-<td>GameSpot</td>
-<td>9/10</td>
-</tr>
-<tr>
-<td>GamesRadar</td>
-<td>4.5 de 5 estrelas</td>
-</tr>
-<tr>
-<td>IGN</td>
-<td>8,9/10</td>
-</tr>
-<tr>
-<td>PC Gamer</td>
-<td>79/100</td>
-</tr>
-<tr>
-<td>Polygon</td>
-<td>8/10</td>
-</tr>
-<tr>
-<td>VideoGamer.com</td>
-<td>9/10</td>
-</tr>
-</table>
-</div>
-<img src="./img/nier-automata-2.png" alt="">
-    </div>
-<a href="https://gitHub.com/guerragga">Meu portifólio</a>
+
+    <a class="scroll-cue" href="#visao-geral" aria-label="Ir para a próxima seção">
+      <span>Scroll</span>
+      <span class="scroll-cue__line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <main id="conteudo">
+    <section class="section section--intro" id="visao-geral" aria-labelledby="visao-geral-title">
+      <div class="section__heading">
+        <p class="eyebrow">Relatório // 01</p>
+        <h2 id="visao-geral-title">Humanidade por ausência</h2>
+        <p class="section__lead">
+          Séculos após a humanidade abandonar a Terra, androides da unidade YoRHa combatem máquinas invasoras em nome de pessoas que nunca conheceram. A missão parece simples até que inimigos começam a demonstrar medo, desejo, linguagem e memória.
+        </p>
+      </div>
+
+      <div class="theme-grid" aria-label="Temas centrais">
+        <article class="theme-card">
+          <span class="theme-card__index" aria-hidden="true">01</span>
+          <h3>Identidade</h3>
+          <p>Personagens construídos para cumprir funções começam a questionar quem são quando suas ordens deixam de explicar o mundo.</p>
+        </article>
+        <article class="theme-card">
+          <span class="theme-card__index" aria-hidden="true">02</span>
+          <h3>Consciência</h3>
+          <p>Máquinas e androides reproduzem emoções humanas, deslocando a discussão de origem biológica para experiência e memória.</p>
+        </article>
+        <article class="theme-card">
+          <span class="theme-card__index" aria-hidden="true">03</span>
+          <h3>Livre-arbítrio</h3>
+          <p>Entre protocolos, ciclos e ordens, cada decisão amplia a tensão entre aquilo que foi programado e aquilo que foi escolhido.</p>
+        </article>
+      </div>
     </section>
-    <!--Script to effect parallax-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script>
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#parallax",
-                start: "top top",
-                end: "bottom top",
-                scrub: true
-            }
-        });
 
-        gsap.utils.toArray(".layer").forEach(layer => {
-            const speed = layer.dataset.speed;
-            const movement = -(layer.offsetHeight * speed)
-            tl.to(layer, {y:movement,ease: "none"},0)
-        })
-    </script>
+    <section class="section" id="personagens" aria-labelledby="personagens-title">
+      <div class="section__heading section__heading--split">
+        <div>
+          <p class="eyebrow">Unidades // YoRHa</p>
+          <h2 id="personagens-title">Personagens</h2>
+        </div>
+        <p class="section__lead">
+          Três perspectivas diferentes sobre dever, descoberta e ruptura. O conflito externo é apenas a superfície de uma história guiada por vínculos e escolhas.
+        </p>
+      </div>
+
+      <div class="character-list">
+        <article class="character-card">
+          <div class="character-card__visual">
+            <span class="character-card__code" aria-hidden="true">NO. 02 // TYPE B</span>
+            <img src="./img/2B_character.png" alt="Ilustração da androide 2B" loading="lazy" decoding="async">
+          </div>
+          <div class="character-card__content">
+            <p class="eyebrow">Battle unit</p>
+            <h3>2B <span>YoRHa No.2 Type B</span></h3>
+            <p>Uma unidade de combate disciplinada e precisa. A postura contida de 2B protege conflitos que tornam sua relação com 9S muito mais complexa do que a missão permite demonstrar.</p>
+            <dl class="character-card__meta">
+              <div><dt>Função</dt><dd>Combate</dd></div>
+              <div><dt>Traço</dt><dd>Disciplina</dd></div>
+              <div><dt>Conflito</dt><dd>Dever × vínculo</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="character-card character-card--reverse">
+          <div class="character-card__visual">
+            <span class="character-card__code" aria-hidden="true">NO. 09 // TYPE S</span>
+            <img src="./img/9S_character.png" alt="Ilustração do androide 9S" loading="lazy" decoding="async">
+          </div>
+          <div class="character-card__content">
+            <p class="eyebrow">Scanner unit</p>
+            <h3>9S <span>YoRHa No.9 Type S</span></h3>
+            <p>Curioso e tecnicamente brilhante, 9S investiga sistemas e informações que outros apenas executariam. Sua busca por respostas transforma conhecimento em força e, depois, em peso.</p>
+            <dl class="character-card__meta">
+              <div><dt>Função</dt><dd>Scanner</dd></div>
+              <div><dt>Traço</dt><dd>Curiosidade</dd></div>
+              <div><dt>Conflito</dt><dd>Verdade × propósito</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="character-card">
+          <div class="character-card__visual">
+            <span class="character-card__code" aria-hidden="true">TYPE A // NO. 02</span>
+            <img src="./img/A2_character.png" alt="Ilustração da androide A2" loading="lazy" decoding="async">
+          </div>
+          <div class="character-card__content">
+            <p class="eyebrow">Prototype unit</p>
+            <h3>A2 <span>YoRHa Type A No.2</span></h3>
+            <p>Uma unidade renegada marcada por experiências anteriores ao modelo atual da YoRHa. A2 traz à narrativa a perspectiva de quem deixou de confiar no sistema, mas não deixou de carregar suas consequências.</p>
+            <dl class="character-card__meta">
+              <div><dt>Função</dt><dd>Protótipo</dd></div>
+              <div><dt>Traço</dt><dd>Resistência</dd></div>
+              <div><dt>Conflito</dt><dd>Passado × redenção</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--soundtrack" id="trilha" aria-labelledby="trilha-title">
+      <div class="section__heading">
+        <p class="eyebrow">Audio log // OST</p>
+        <h2 id="trilha-title">Uma trilha que também conta a história</h2>
+        <p class="section__lead">
+          A música de Keiichi Okabe e da equipe MONACA acompanha ruínas, batalhas e descobertas sem funcionar apenas como fundo. Ela participa da identidade emocional de cada espaço.
+        </p>
+      </div>
+
+      <ol class="track-list">
+        <li><span>01</span><div><strong>Weight of the World</strong><p>Tema central que concentra melancolia, esperança e encerramento.</p></div></li>
+        <li><span>02</span><div><strong>City Ruins</strong><p>Desolação e serenidade coexistem nas ruínas tomadas pela natureza.</p></div></li>
+        <li><span>03</span><div><strong>Amusement Park</strong><p>Uma atmosfera festiva e inquietante para um dos cenários mais memoráveis.</p></div></li>
+        <li><span>04</span><div><strong>A Beautiful Song</strong><p>Escala dramática e tensão traduzidas em uma composição de confronto.</p></div></li>
+        <li><span>05</span><div><strong>Copied City</strong><p>Minimalismo e estranheza acompanham um espaço que parece familiar e artificial ao mesmo tempo.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="section" id="recepcao" aria-labelledby="recepcao-title">
+      <div class="section__heading section__heading--split">
+        <div>
+          <p class="eyebrow">Archive // Reviews</p>
+          <h2 id="recepcao-title">Recepção</h2>
+        </div>
+        <p class="section__lead">
+          A recepção crítica destacou narrativa, combate e trilha sonora, enquanto a versão original para PC também recebeu observações sobre problemas técnicos. A tabela preserva as notas reunidas no projeto original.
+        </p>
+      </div>
+
+      <div class="reception-layout">
+        <div class="table-card">
+          <div class="table-card__heading">
+            <span>Publicação</span>
+            <span>Nota</span>
+          </div>
+          <table>
+            <caption class="sr-only">Notas de publicações para NieR: Automata</caption>
+            <thead>
+              <tr><th scope="col">Publicação</th><th scope="col">Nota</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Publicação">Destructoid</td><td data-label="Nota">9/10</td></tr>
+              <tr><td data-label="Publicação">Electronic Gaming Monthly</td><td data-label="Nota">8,5/10</td></tr>
+              <tr><td data-label="Publicação">Famitsu</td><td data-label="Nota">39/40</td></tr>
+              <tr><td data-label="Publicação">Game Informer</td><td data-label="Nota">7,75/10</td></tr>
+              <tr><td data-label="Publicação">Game Revolution</td><td data-label="Nota">4/5</td></tr>
+              <tr><td data-label="Publicação">GameSpot</td><td data-label="Nota">9/10</td></tr>
+              <tr><td data-label="Publicação">GamesRadar</td><td data-label="Nota">4,5/5</td></tr>
+              <tr><td data-label="Publicação">IGN</td><td data-label="Nota">8,9/10</td></tr>
+              <tr><td data-label="Publicação">PC Gamer</td><td data-label="Nota">79/100</td></tr>
+              <tr><td data-label="Publicação">Polygon</td><td data-label="Nota">8/10</td></tr>
+              <tr><td data-label="Publicação">VideoGamer.com</td><td data-label="Nota">9/10</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="archive-note" aria-label="Nota sobre o projeto">
+          <span class="archive-note__label">PROJECT FILE // 2026</span>
+          <h3>Um exercício que virou peça de portfólio</h3>
+          <p>
+            Esta versão preserva a ideia original do projeto — estudar efeito parallax com uma temática pessoal — e a reconstrói com semântica, responsividade, acessibilidade e JavaScript nativo.
+          </p>
+          <a class="text-link" href="https://github.com/Guerragga/Parallax-Effect-Website" target="_blank" rel="noreferrer">
+            Ver código no GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p class="site-footer__brand">YoRHa // Archive</p>
+      <p>Projeto de estudo sem fins comerciais, inspirado em NieR: Automata.</p>
+    </div>
+    <div class="site-footer__links">
+      <a href="#inicio">Voltar ao topo</a>
+      <a href="https://github.com/Guerragga" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
 </body>
 </html>
